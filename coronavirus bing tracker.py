@@ -1,22 +1,33 @@
+# !!!!!!!!!!!!!!!!! READ THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+# this was built by mithil salunkhe. don`t read my commit message. please only mess with the variables i have commented
+# unless you are god just please AND I MEAN IT. if you want to contribute please contribute. and don`t remove it
+
 from selenium import webdriver
 import time
+import locale
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"  # your path for the chrome web driver
 driver = webdriver.Chrome(PATH)  # for chrome
 
 driver.get('https://www.bing.com/covid/local/india')
-search = driver.find_element_by_id('maharashtra_india')  # enter your state id on bing covid-19 tracker
-search.click()
-states_id = ['nanded_maharashtra_india']  # districts you want to see
+time.sleep(10)
+state_name = driver.find_element_by_id("maharashtra_india")  # enter your state id on bing covid-19 tracker
+state_name.click()
+district_id = ['nanded_maharashtra_india']  # districts you want to see
 total_case = []
 ie = 0
-for i in states_id:
+locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
+
+for i in district_id:
 	name_of_state = driver.find_element_by_id(i)
 	name_of_state.click()
 	cases = driver.find_elements_by_class_name('confirmed')
 
 	for case in cases:
-		print('{}:{}'.format(i, case.text))
+		case_int = locale.atoi(case.text)
+
+		if case_int <= 17297296:  # change the value to compare with with the latest covid count
+			print('{}:{}'.format(i, case.text))
 	print(ie)
 	ie += 1
 	print(ie)
