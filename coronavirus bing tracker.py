@@ -1,6 +1,6 @@
-# !!!!!!!!!!!!!!!!! READ THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-# this was built by mithil salunkhe. don`t read my commit message. please only mess with the variables i have commented
-# unless you are god just please AND I MEAN IT. if you want to contribute please contribute. and don`t remove this
+# !!!!!!!!!!!!!!!!! READ THIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! this was built by mithil salunkhe. don`t read
+# my commit message. please only mess with the variables i have commented unless you are god just please AND I MEAN
+# IT. if you want to contribute please contribute. and don`t remove this
 
 from selenium import webdriver
 import time
