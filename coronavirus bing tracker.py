@@ -2,18 +2,8 @@
 # my commit message. please only mess with the variables i have commented unless you are god just please AND I MEAN
 # IT. if you want to contribute please contribute. and don`t remove this
 
-from selenium import webdriver
-import time
-import locale
-start_time = time.time()
+import
 
-
-PATH = "C:\Program Files (x86)\chromedriver.exe"  # your path for the chrome web driver
-driver = webdriver.Chrome(PATH)  # for chrome
-
-
-state_name = driver.find_element_by_id("maharashtra_india")  # enter your state id on bing covid-19 tracker
-state_name.click()
 district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
                'thane_maharashtra_india', 'raigarh_maharashtra_india',
                'nashik_maharashtra_india', 'palghar_maharashtra_india',
