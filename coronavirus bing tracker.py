@@ -35,7 +35,6 @@ district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_mah
                'gadchiroli_maharashtra_india', 'bhandara_maharashtra_india',
                'wardha_maharashtra_india']  # districts you want to see
 total_case = []
-ie = 0
 locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
 for i in district_id:
@@ -49,7 +48,7 @@ for i in district_id:
 		if case_int <= 17297296:  # change the value to compare with with the latest covid count
 			print('{}:{}'.format(i, case.text))
 
-	ie += 1
+
 print("--- %s seconds ---" % (time.time() - start_time))
 
 time.sleep(5)
