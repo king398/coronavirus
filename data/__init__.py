@@ -2,6 +2,7 @@ from selenium import webdriver
 import time
 import locale
 
+
 total_case = {}
 
 
