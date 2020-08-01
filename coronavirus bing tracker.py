@@ -4,9 +4,7 @@
 from selenium import webdriver
 import time
 import locale
-from xlwt import Workbook
-
-
+from xlwt import Workbo
 def coronavirus_case(Path, state_name_element, district_id):
 	total_case = {}
 	case_1 = []
