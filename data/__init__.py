@@ -23,7 +23,8 @@ def coronavirus_case(Path, state_name_element, district_id):
 				print('{}:{}'.format(i, case.text))
 				total_case.update({i: case.text})
 	case_1 = total_case.keys()
-	case_2 = total_case.values()
+	case_2 = int(total_case.values())
+
 	print(case_1, case_2)
 	print(total_case)
 	time.sleep(5)
