@@ -4,8 +4,6 @@
 from selenium import webdriver
 import time
 import locale
-import matplotlib.pyplot as plt
-import xlwt
 from xlwt import Workbook
 
 
