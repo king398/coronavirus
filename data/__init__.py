@@ -2,6 +2,7 @@ def coronavirus_case(Path, state_name_element, district_id):
 	from selenium import webdriver
 	import time
 	import locale
+	import matplotlib.pyplot as plt
 	import xlwt
 	from xlwt import Workbook
 	total_case = {}
@@ -46,3 +47,5 @@ def coronavirus_case(Path, state_name_element, district_id):
 
 	time.sleep(5)
 	driver.quit()
+	
+	
