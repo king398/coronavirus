@@ -3,6 +3,8 @@ def coronavirus_case(Path, state_name_element, district_id):
 	import time
 	import locale
 	total_case = {}
+	case_1 = []
+	case_2 = []
 	driver = webdriver.Chrome(Path)
 	driver.get('https://www.bing.com/covid/local/india')
 	state_name = driver.find_element_by_id(state_name_element)
@@ -20,6 +22,9 @@ def coronavirus_case(Path, state_name_element, district_id):
 			if case_int <= 17297296:  # change the value to compare with with the latest covid count
 				print('{}:{}'.format(i, case.text))
 				total_case.update({i: case.text})
+	case_1 = total_case.keys()
+	case_2 = total_case.values()
+	print(case_1, case_2)
 	print(total_case)
 	time.sleep(5)
 	driver.quit()
