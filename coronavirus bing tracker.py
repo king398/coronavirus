@@ -5,12 +5,13 @@
 from selenium import webdriver
 import time
 import locale
+start_time = time.time()
+
 
 PATH = "C:\Program Files (x86)\chromedriver.exe"  # your path for the chrome web driver
 driver = webdriver.Chrome(PATH)  # for chrome
 
-driver.get('https://www.bing.com/covid/local/india')
-time.sleep(5)
+
 state_name = driver.find_element_by_id("maharashtra_india")  # enter your state id on bing covid-19 tracker
 state_name.click()
 district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
@@ -49,6 +50,7 @@ for i in district_id:
 			print('{}:{}'.format(i, case.text))
 
 	ie += 1
+print("--- %s seconds ---" % (time.time() - start_time))
 
 time.sleep(5)
 driver.quit()
