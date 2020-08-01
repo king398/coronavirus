@@ -4,7 +4,12 @@
 from selenium import webdriver
 import time
 import locale
-from xlwt import Workbo
+import xlwt
+from xlwt import Workbook
+
+start_time = time.time()
+
+
 def coronavirus_case(Path, state_name_element, district_id):
 	total_case = {}
 	case_1 = []
@@ -73,3 +78,4 @@ district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_mah
 
 coronavirus_case(Path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
                  district_id=district_id)
+print("--- %s seconds ---" % (time.time() - start_time))
