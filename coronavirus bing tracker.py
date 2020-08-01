@@ -2,7 +2,7 @@
 # my commit message. please only mess with the variables i have commented unless you are god just please AND I MEAN
 # IT. if you want to contribute please contribute. and don`t remove this
 
-import data
+from coronavirus.data import coronavirus_case
 
 district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
                'thane_maharashtra_india', 'raigarh_maharashtra_india',
@@ -37,7 +37,6 @@ for i in district_id:
 
 		if case_int <= 17297296:  # change the value to compare with with the latest covid count
 			print('{}:{}'.format(i, case.text))
-
 
 print("--- %s seconds ---" % (time.time() - start_time))
 
