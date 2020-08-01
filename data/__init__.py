@@ -37,9 +37,10 @@ def coronavirus_case(Path, state_name_element, district_id):
 
 		i += 1
 	for writing in case_2:
-		sheet1.write(ie, 1, writing)
+		writing_int = locale.atoi(writing)
+		sheet1.write(ie, 1, writing_int)
 		ie += 1
-	filename = time.time()
+	filename = time.localtime()
 
 	excelfile.save("sample{}.xls".format(filename))  # enter the name of the file in the quotation marks
 
