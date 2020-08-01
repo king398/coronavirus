@@ -7,6 +7,7 @@ total_case = {}
 
 def coronavirus_case(Path, state_name_element, district_id):
 	driver = webdriver.Chrome(Path)
+	driver.get('https://www.bing.com/covid/local/india')
 	state_name = driver.find_element_by_id(state_name_element)
 	state_name.click()
 

@@ -24,21 +24,6 @@ district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_mah
                'sindhudurg_maharashtra_india', 'gondia_maharashtra_india',
                'gadchiroli_maharashtra_india', 'bhandara_maharashtra_india',
                'wardha_maharashtra_india']  # districts you want to see
-total_case = []
-locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
-for i in district_id:
-	name_of_state = driver.find_element_by_id(i)
-	name_of_state.click()
-	cases = driver.find_elements_by_class_name('confirmed')
-
-	for case in cases:
-		case_int = locale.atoi(case.text)
-
-		if case_int <= 17297296:  # change the value to compare with with the latest covid count
-			print('{}:{}'.format(i, case.text))
-
-print("--- %s seconds ---" % (time.time() - start_time))
-
-time.sleep(5)
-driver.quit()
+coronavirus_case(Path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
+                 district_id=district_id)
