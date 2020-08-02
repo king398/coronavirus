@@ -59,6 +59,9 @@ def coronavirus_case(Path, state_name_element, district_id):
 		names.append(naming)
 	for valuing in case_2:
 		values.append(valuing)
+	plt.barh(names, values, align='center', alpha=0.5)
+	plt.yticks(labels=names, ticks=values,)
+	plt.show()
 
 
 district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
