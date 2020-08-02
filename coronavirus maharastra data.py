@@ -78,7 +78,3 @@ district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_mah
 coronavirus_case(Path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
                  district_id=district_id)
 print("--- %s seconds ---" % (time.time() - start_time))
-read_file = pd.read_excel(r'coronavirus\sample-maharashtra.xls')
-read_file.to_csv(r'coronavirus\maharashtra.csv', index=None, header=True)
-csv = pd.read_csv(read_file)
-csv.
