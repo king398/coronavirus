@@ -6,6 +6,7 @@ import time
 import locale
 import pandas as pd
 from xlwt import Workbook
+import matplotlib.pyplot as plt
 
 start_time = time.time()
 
@@ -52,6 +53,12 @@ def coronavirus_case(Path, state_name_element, district_id):
 
 	time.sleep(5)
 	driver.quit()
+	names = []
+	values = []
+	for naming in case_1:
+		names.append(naming)
+	for valuing in case_2:
+		values.append(valuing)
 
 
 district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
