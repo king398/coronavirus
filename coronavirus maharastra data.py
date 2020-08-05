@@ -13,8 +13,6 @@ start_time = time.time()
 
 def coronavirus_case(Path, state_name_element, district_id):
 	total_case = {}
-	case_1 = []
-	case_2 = []
 	driver = webdriver.Chrome(Path)
 	driver.get('https://www.bing.com/covid/local/india')
 	time.sleep(5)
@@ -65,25 +63,25 @@ def coronavirus_case(Path, state_name_element, district_id):
 
 
 districst_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
-               'thane_maharashtra_india', 'raigarh_maharashtra_india',
-               'nashik_maharashtra_india', 'palghar_maharashtra_india',
-               'nashik_maharashtra_india', 'aurangabad_maharashtra_india', 'solapur_maharashtra_india',
-               'kolhapur_maharashtra_india', 'nagpur_maharashtra_india',
-               'ahmednagar_maharashtra_india', 'satara_maharashtra_india',
-               'dhule_maharashtra_india', 'akola_maharashtra_india',
-               'sangli_maharashtra_india',
-               'amravati_maharashtra_india',
-               'latur_maharashtra_india',
-               'jalna_maharashtra_india',
-               'ratnagiri_maharashtra_india',
-               'buldana_maharashtra_india',
-               'osmanabad_maharashtra_india', 'yavatmal_maharashtra_india',
-               'beed_maharashtra_india', 'parbhani_maharashtra_india',
-               'nandurbar_maharashtra_india', 'washim_maharashtra_india',
-               'hingoli_maharashtra_india', 'chandrapur_maharashtra_india',
-               'sindhudurg_maharashtra_india', 'gondia_maharashtra_india',
-               'gadchiroli_maharashtra_india', 'bhandara_maharashtra_india',
-               'wardha_maharashtra_india']  # districts you want to see
+                'thane_maharashtra_india', 'raigarh_maharashtra_india',
+                'nashik_maharashtra_india', 'palghar_maharashtra_india',
+                'nashik_maharashtra_india', 'aurangabad_maharashtra_india', 'solapur_maharashtra_india',
+                'kolhapur_maharashtra_india', 'nagpur_maharashtra_india',
+                'ahmednagar_maharashtra_india', 'satara_maharashtra_india',
+                'dhule_maharashtra_india', 'akola_maharashtra_india',
+                'sangli_maharashtra_india',
+                'amravati_maharashtra_india',
+                'latur_maharashtra_india',
+                'jalna_maharashtra_india',
+                'ratnagiri_maharashtra_india',
+                'buldana_maharashtra_india',
+                'osmanabad_maharashtra_india', 'yavatmal_maharashtra_india',
+                'beed_maharashtra_india', 'parbhani_maharashtra_india',
+                'nandurbar_maharashtra_india', 'washim_maharashtra_india',
+                'hingoli_maharashtra_india', 'chandrapur_maharashtra_india',
+                'sindhudurg_maharashtra_india', 'gondia_maharashtra_india',
+                'gadchiroli_maharashtra_india', 'bhandara_maharashtra_india',
+                'wardha_maharashtra_india']  # districts you want to see
 
 coronavirus_case(Path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
                  district_id=districst_id)
