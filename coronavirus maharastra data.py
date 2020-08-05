@@ -5,8 +5,7 @@ from selenium import webdriver
 import time
 import locale
 from xlwt import Workbook
-import matplotlib.pyplot as plt
-import seaborn as sns
+import datetime
 
 start_time = time.time()
 
@@ -47,7 +46,8 @@ def coronavirus_case(Path, state_name_element, district_id):
 		sheet1.write(ie, 1, writing_int)
 		ie += 1
 
-	excelfile.save("sample-maharashtra.xls")  # enter the name of the file in the quotation marks
+	excelfile.save(
+		"sample-maharashtra.xls")  # enter the name of the file in the quotation marks
 
 	time.sleep(5)
 	driver.quit()
@@ -57,9 +57,6 @@ def coronavirus_case(Path, state_name_element, district_id):
 		ploting.update({naming: locale.atoi(valuing)})
 
 	print(ploting)
-	sns.barplot(x=int(ploting.keys()), y=ploting.items)
-
-	plt.show()
 
 
 districst_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
