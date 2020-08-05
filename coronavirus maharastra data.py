@@ -23,6 +23,7 @@ def coronavirus_case(path, state_name_element, district_id):
 	for i in district_id:
 		name_of_district = driver.find_element_by_id(i)
 		name_of_district.click()
+
 		cases = driver.find_elements_by_class_name('confirmed')
 		more_infromation = driver.find_elements_by_class_name('statCount')
 		info_about_what_they_are = driver.find_elements_by_class_name('stat')
