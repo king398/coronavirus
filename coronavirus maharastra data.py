@@ -57,9 +57,9 @@ def coronavirus_case(path, state_name_element, district_id):
 
 		time.sleep(5)
 		driver.quit()
-		ploting = {}
-
 		
+
+
 
 	districst_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
 	                'thane_maharashtra_india', 'raigarh_maharashtra_india',
