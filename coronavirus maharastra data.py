@@ -57,9 +57,7 @@ def coronavirus_case(path, state_name_element, district_id):
 
 		time.sleep(5)
 		driver.quit()
-		
-
-
+		print(for_more)
 
 	districst_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
 	                'thane_maharashtra_india', 'raigarh_maharashtra_india',
@@ -82,6 +80,7 @@ def coronavirus_case(path, state_name_element, district_id):
 	                'gadchiroli_maharashtra_india', 'bhandara_maharashtra_india',
 	                'wardha_maharashtra_india']  # districts you want to see
 
-	coronavirus_case(path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
-	                 district_id=districst_id)
-	print("--- %s seconds ---" % (time.time() - start_time))
+
+coronavirus_case(path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
+                 district_id=districst_id)
+print("--- %s seconds ---" % (time.time() - start_time))
