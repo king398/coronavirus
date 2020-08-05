@@ -4,9 +4,9 @@
 from selenium import webdriver
 import time
 import locale
-import pandas as pd
 from xlwt import Workbook
 import matplotlib.pyplot as plt
+import seaborn as sns
 
 start_time = time.time()
 
@@ -53,18 +53,18 @@ def coronavirus_case(Path, state_name_element, district_id):
 
 	time.sleep(5)
 	driver.quit()
-	names = []
-	values = []
-	for naming in case_1:
-		names.append(naming)
-	for valuing in case_2:
-		values.append(valuing)
-	plt.barh(names, values, align='center', alpha=0.5)
-	plt.yticks(labels=names, ticks=values,)
+	ploting = {}
+
+	for naming, valuing in zip(case_1, case_2):
+		ploting.update({naming: locale.atoi(valuing)})
+
+	print(ploting)
+	sns.barplot(x=int(ploting.keys()), y=ploting.items)
+
 	plt.show()
 
 
-district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
+districst_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_maharashtra_india',
                'thane_maharashtra_india', 'raigarh_maharashtra_india',
                'nashik_maharashtra_india', 'palghar_maharashtra_india',
                'nashik_maharashtra_india', 'aurangabad_maharashtra_india', 'solapur_maharashtra_india',
@@ -86,5 +86,5 @@ district_id = ['nanded_maharashtra_india', 'mumbai_maharashtra_india', 'pune_mah
                'wardha_maharashtra_india']  # districts you want to see
 
 coronavirus_case(Path="C:\Program Files (x86)\chromedriver.exe", state_name_element="maharashtra_india",
-                 district_id=district_id)
+                 district_id=districst_id)
 print("--- %s seconds ---" % (time.time() - start_time))
